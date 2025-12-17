@@ -19,10 +19,10 @@ class ParserServiceImplTest {
 
     @Test
     void getFromCsvRow_null_notOk() {
-        IllegalArgumentException illegalArgumentException =
+        IllegalArgumentException exception =
                 assertThrows(IllegalArgumentException.class,
                     () -> parserService.getFromCsvRow(null));
-        assertEquals("The file contains no data", illegalArgumentException.getMessage());
+        assertEquals("The file contains no data", exception.getMessage());
     }
 
     @Test

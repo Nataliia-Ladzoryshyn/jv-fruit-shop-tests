@@ -20,10 +20,10 @@ class BalanceOperationHandlerTest {
 
     @Test
     void handleTransaction_valid_ok() {
-        FruitTransaction fruitTransaction = new FruitTransaction(Operation.BALANCE, "banana", 30);
+        FruitTransaction fruitTransaction = new FruitTransaction(Operation.BALANCE, "banana", 20);
         balanceOperationHandler.handleTransaction(fruitTransaction);
         Map<String, Integer> storage = Storage.getStorageFruit();
         assertEquals(1, storage.size());
-        assertEquals(30, storage.get("banana"));
+        assertEquals(20, storage.get("banana"));
     }
 }

@@ -11,9 +11,9 @@ class FruitTransactionTest {
         String fruit = "banana";
         int quantity = 10;
 
-        FruitTransaction newFruit = new FruitTransaction(operation, fruit, quantity);
-        assertEquals(operation, newFruit.getOperation());
-        assertEquals(fruit,newFruit.getFruit());
-        assertEquals(quantity,newFruit.getQuantity());
+        FruitTransaction newFruitTransaction = new FruitTransaction(operation, fruit, quantity);
+        assertEquals(operation, newFruitTransaction.getOperation());
+        assertEquals(fruit,newFruitTransaction.getFruit());
+        assertEquals(quantity,newFruitTransaction.getQuantity());
     }
 }

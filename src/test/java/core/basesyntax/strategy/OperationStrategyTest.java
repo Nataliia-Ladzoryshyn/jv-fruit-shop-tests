@@ -14,10 +14,10 @@ class OperationStrategyTest {
 
     @BeforeEach
     void setUp() {
-        Map<Operation, OperationHandler> map = new HashMap<>();
-        map.put(Operation.BALANCE, new BalanceOperationHandler());
-        map.put(Operation.SUPPLY, new SupplyOperationHandler());
-        operationStrategy = new OperationStrategy(map);
+        Map<Operation, OperationHandler> mapOperation = new HashMap<>();
+        mapOperation.put(Operation.BALANCE, new BalanceOperationHandler());
+        mapOperation.put(Operation.SUPPLY, new SupplyOperationHandler());
+        operationStrategy = new OperationStrategy(mapOperation);
     }
 
     @Test

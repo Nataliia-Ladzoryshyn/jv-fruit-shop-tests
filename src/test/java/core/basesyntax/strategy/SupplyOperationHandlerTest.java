@@ -27,8 +27,8 @@ class SupplyOperationHandlerTest {
 
     @Test
     void handleTransaction_notExistFruit_Ok() {
-        FruitTransaction fruitTransaction = new FruitTransaction(Operation.SUPPLY, "banana", 21);
+        FruitTransaction fruitTransaction = new FruitTransaction(Operation.SUPPLY, "banana", 31);
         supplyOperationHandler.handleTransaction(fruitTransaction);
-        assertEquals(21, Storage.getStorageFruit().get("banana"));
+        assertEquals(31, Storage.getStorageFruit().get("banana"));
     }
 }

@@ -21,10 +21,10 @@ class PurchaseOperationHandlerTest {
 
     @Test
     void handleTransaction_enoughFruit_ok() {
-        Storage.getStorageFruit().put("banana", 100);
+        Storage.getStorageFruit().put("banana", 95);
         FruitTransaction fruitTransaction = new FruitTransaction(Operation.PURCHASE, "banana", 5);
         purchaseOperationHandler.handleTransaction(fruitTransaction);
-        assertEquals(95,Storage.getStorageFruit().get("banana"));
+        assertEquals(90,Storage.getStorageFruit().get("banana"));
     }
 
     @Test

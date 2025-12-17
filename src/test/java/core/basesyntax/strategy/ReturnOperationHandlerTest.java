@@ -19,10 +19,10 @@ class ReturnOperationHandlerTest {
 
     @Test
     void handleTransaction_existFruit_Ok() {
-        Storage.getStorageFruit().put("banana", 20);
+        Storage.getStorageFruit().put("banana", 40);
         FruitTransaction fruitTransaction = new FruitTransaction(Operation.RETURN, "banana", 30);
         returnOperationHandler.handleTransaction(fruitTransaction);
-        assertEquals(50, Storage.getStorageFruit().get("banana"));
+        assertEquals(70, Storage.getStorageFruit().get("banana"));
     }
 
     @Test

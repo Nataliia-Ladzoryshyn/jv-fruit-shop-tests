@@ -29,10 +29,10 @@ class FileReadImplTest {
 
     @Test
     void readFileContents_readEmptyFile_Ok(@TempDir Path testPath) throws IOException {
-        Path testFile = testPath.resolve("test.csv");
+        Path test = testPath.resolve("test.csv");
         List<String> emptyFile = List.of();
-        Files.write(testFile, emptyFile);
-        List<String> emptyContent = fileRead.readFileContents(testFile.toString());
+        Files.write(test, emptyFile);
+        List<String> emptyContent = fileRead.readFileContents(test.toString());
         assertTrue(emptyContent.isEmpty());
     }
 

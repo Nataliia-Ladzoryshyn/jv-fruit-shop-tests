@@ -34,12 +34,12 @@ class FruitServiceImplTest {
 
     @Test
     void process_valid_Ok() {
-        List<FruitTransaction> transactionList = List.of(
+        List<FruitTransaction> transaction = List.of(
                 new FruitTransaction(Operation.BALANCE, "banana", 20),
                 new FruitTransaction(Operation.SUPPLY, "banana", 100),
                 new FruitTransaction(Operation.PURCHASE, "banana", 80),
                 new FruitTransaction(Operation.RETURN, "banana", 10));
-        Map<String, Integer> processMap = fruitService.process(transactionList);
+        Map<String, Integer> processMap = fruitService.process(transaction);
         assertEquals(50, processMap.get("banana"));
     }
 }

@@ -17,10 +17,10 @@ class OperationTest {
 
     @Test
     void fromCode_unknownOperation_NotOk() {
-        IllegalArgumentException illegalArgumentException =
+        IllegalArgumentException exception =
                 assertThrows(IllegalArgumentException.class,
                     () -> Operation.fromCode("n"));
 
-        assertTrue(illegalArgumentException.getMessage().contains("Unknown operation"));
+        assertTrue(exception.getMessage().contains("Unknown operation"));
     }
 }

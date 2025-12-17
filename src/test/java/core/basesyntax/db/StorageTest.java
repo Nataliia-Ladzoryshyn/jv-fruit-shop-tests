@@ -15,9 +15,9 @@ class StorageTest {
 
     @Test
     void getStorageFruit_sameInstance_Ok() {
-        Map<String, Integer> firstCall = Storage.getStorageFruit();
-        Map<String, Integer> secondCall = Storage.getStorageFruit();
-        assertSame(firstCall,secondCall);
+        Map<String, Integer> first = Storage.getStorageFruit();
+        Map<String, Integer> second = Storage.getStorageFruit();
+        assertSame(first,second);
     }
 
     @Test

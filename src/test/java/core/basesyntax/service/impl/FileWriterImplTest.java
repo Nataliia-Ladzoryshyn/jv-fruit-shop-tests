@@ -17,10 +17,10 @@ class FileWriterImplTest {
 
     @Test
     void write_dataWriteCorrectly_Ok(@TempDir Path testPath) throws IOException {
-        Path testFile = testPath.resolve("testFile.csv");
+        Path test = testPath.resolve("testFile.csv");
         List<String> testContent = List.of("b,banana,20", "b,apple,100", "s,banana,100");
-        fileWriter.write(testContent, testFile.toString());
-        Files.readAllLines(testFile);
+        fileWriter.write(testContent, test.toString());
+        Files.readAllLines(test);
         assertEquals(3, testContent.size());
         assertEquals("b,banana,20", testContent.get(0));
         assertEquals("b,apple,100", testContent.get(1));

@@ -12,7 +12,7 @@ class ReportWriteServiceImplTest {
     @Test
     void writeReport_valid_ok() {
         Map<String, Integer> report = new HashMap<>();
-        report.put("apple", 2);
+        report.put("apple", 6);
         report.put("banana", 5);
         ReportWriteServiceImpl reportWriteService = new ReportWriteServiceImpl();
         List<String> stringList = reportWriteService.writeReport(report);
