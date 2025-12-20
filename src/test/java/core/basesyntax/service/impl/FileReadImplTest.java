@@ -45,3 +45,4 @@ class FileReadImplTest {
                 .contains("Can't get data from file " + fileNotFound));
     }
 }
+

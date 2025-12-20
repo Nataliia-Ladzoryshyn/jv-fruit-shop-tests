@@ -24,3 +24,4 @@ class OperationTest {
         assertTrue(exception.getMessage().contains("Unknown operation"));
     }
 }
+

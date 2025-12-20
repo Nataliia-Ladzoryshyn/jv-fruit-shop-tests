@@ -27,3 +27,4 @@ class BalanceOperationHandlerTest {
         assertEquals(20, storage.get("banana"));
     }
 }
+

@@ -32,3 +32,4 @@ class ReturnOperationHandlerTest {
         assertEquals(21, Storage.getStorageFruit().get("banana"));
     }
 }
+

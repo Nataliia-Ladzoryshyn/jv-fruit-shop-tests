@@ -32,3 +32,4 @@ class SupplyOperationHandlerTest {
         assertEquals(31, Storage.getStorageFruit().get("banana"));
     }
 }
+

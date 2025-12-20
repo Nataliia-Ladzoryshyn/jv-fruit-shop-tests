@@ -76,3 +76,4 @@ class ParserServiceImplTest {
         assertEquals(5, secondTransaction.getQuantity());
     }
 }
+

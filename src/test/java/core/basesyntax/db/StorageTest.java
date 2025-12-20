@@ -26,3 +26,4 @@ class StorageTest {
         assertEquals(30,Storage.getStorageFruit().get("banana"));
     }
 }
+

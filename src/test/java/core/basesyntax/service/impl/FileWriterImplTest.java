@@ -45,3 +45,4 @@ class FileWriterImplTest {
         assertFalse(runtimeException.getMessage().contains("Can't write to file " + nameFile));
     }
 }
+

@@ -36,3 +36,4 @@ class ReportWriteServiceImplTest {
         assertThrows(NullPointerException.class, () -> reportWriteService.writeReport(null));
     }
 }
+

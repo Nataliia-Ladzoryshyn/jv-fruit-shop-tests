@@ -43,3 +43,4 @@ class FruitServiceImplTest {
         assertEquals(50, processMap.get("banana"));
     }
 }
+

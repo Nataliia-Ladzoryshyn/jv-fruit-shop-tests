@@ -17,3 +17,4 @@ class FruitTransactionTest {
         assertEquals(quantity,newFruitTransaction.getQuantity());
     }
 }
+

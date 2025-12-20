@@ -27,3 +27,4 @@ class OperationStrategyTest {
         assertTrue(strategy instanceof BalanceOperationHandler);
     }
 }
+
