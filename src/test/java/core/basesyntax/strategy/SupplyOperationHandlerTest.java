@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import core.basesyntax.db.Storage;
 import core.basesyntax.model.FruitTransaction;
 import core.basesyntax.model.Operation;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +15,6 @@ class SupplyOperationHandlerTest {
     @BeforeEach
     void setUp() {
         supplyOperationHandler = new SupplyOperationHandler();
-        Storage.getStorageFruit().clear();
     }
 
     @Test
@@ -30,6 +30,11 @@ class SupplyOperationHandlerTest {
         FruitTransaction fruitTransaction = new FruitTransaction(Operation.SUPPLY, "banana", 31);
         supplyOperationHandler.handleTransaction(fruitTransaction);
         assertEquals(31, Storage.getStorageFruit().get("banana"));
+    }
+
+    @AfterEach
+    void tearDown() {
+        Storage.getStorageFruit().clear();
     }
 }
 

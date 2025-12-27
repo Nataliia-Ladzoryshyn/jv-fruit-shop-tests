@@ -6,6 +6,7 @@ import core.basesyntax.db.Storage;
 import core.basesyntax.model.FruitTransaction;
 import core.basesyntax.model.Operation;
 import java.util.Map;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +16,6 @@ class BalanceOperationHandlerTest {
     @BeforeEach
     void setUp() {
         balanceOperationHandler = new BalanceOperationHandler();
-        Storage.getStorageFruit().clear();
     }
 
     @Test
@@ -25,6 +25,11 @@ class BalanceOperationHandlerTest {
         Map<String, Integer> storage = Storage.getStorageFruit();
         assertEquals(1, storage.size());
         assertEquals(20, storage.get("banana"));
+    }
+
+    @AfterEach
+    void afterEach() {
+        Storage.getStorageFruit().clear();
     }
 }
 

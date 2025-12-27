@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import core.basesyntax.db.Storage;
 import core.basesyntax.model.FruitTransaction;
 import core.basesyntax.model.Operation;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +17,6 @@ class PurchaseOperationHandlerTest {
     @BeforeEach
     void setUp() {
         purchaseOperationHandler = new PurchaseOperationHandler();
-        Storage.getStorageFruit().clear();
     }
 
     @Test
@@ -43,6 +43,11 @@ class PurchaseOperationHandlerTest {
                 () -> purchaseOperationHandler.handleTransaction(fruitTransaction));
         assertTrue(runtimeException.getMessage()
                 .contains("There isn't that much fruit in the store"));
+    }
+
+    @AfterEach
+    void tearDown() {
+        Storage.getStorageFruit().clear();
     }
 }
 
